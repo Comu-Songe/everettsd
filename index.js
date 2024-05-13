@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const prefix = '/pa';  
 const localAddresses = []; 
-const blockedHostnames = ["https://sevenworks.eu.org/bad-site"]; 
+const blockedHostnames = ["https://pornhub.com"]; 
 const ssl = false;  
 const port = 6969; 
 const index_file = 'index.html'; 
