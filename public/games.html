@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PLEXILE ARCADE | Games</title>
+  <link rel="icon" type="image/png" href="/plexilearcade.png">      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+  body {
+    background-color: #1e1e24;
+    color: #ffffff;
+    font-family: 'Be Vietnam Pro', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+  }
+
+
+  .navbar {
+    background-color: #1e1e24;
+    padding: 1px 28px; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid #343436; 
+    box-shadow: 0 1px 5px #000; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000;
+  }
+
+      .navbar a {
+
+      }
+
+
+  .logo {
+    margin-right: 5px;
+    width: 52px; 
+    height: 52px; 
+    cursor: pointer; 
+    transition: box-shadow 0.3s ease, border 0.3s ease; 
+    border-radius: 6px; 
+    border: 1px solid transparent;
+  }
+
+  .logo:hover {
+  box-shadow: 0 1px 10px #b03232; 
+
+  }
+  .navbar-item:hover {
+  color: #b03232; 
+  text-shadow: 
+  -2px 0 #130101,
+  0 2px #130101,
+  2px 0 #130101,
+  0 -2px #130101; 
+
+  }
+
+  .settings-icon:hover {
+
+  box-shadow: 0 1px 10px #b03232; 
+
+  }
+
+  .settings-icon {
+  border: 1px solid #343436;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px #000;
+  color: #bf4141;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+  text-shadow:
+  -2px 0 #130101,
+  0 2px #130101,
+  2px 0 #130101,
+  0 -2px #130101;
+  padding: 9px 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+  right: -667px;
+  }
+
+
+
+  .navbar-item {
+    margin-left: 15px; 
+    color: #bf4141;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold; 
+    text-shadow: 
+        -2px 0 #130101,
+         0 2px #130101,
+         2px 0 #130101,
+         0 -2px #130101; 
+    padding: 6px 5px; 
+    cursor: pointer; 
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease, color 0.3s ease, border 0.3s ease; 
+  }
+
+  .search-bar {
+    margin-left: auto;
+    margin-right: 60px;
+    padding: 9.9px 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 1px 10px #000; 
+    background-color: #1e1e24;
+    border: 1px solid transparent; 
+    transition: width 0.3s ease, background-color 0.3s ease; 
+    width: 230px; 
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="%236C6C6D"/></svg>');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 24px 24px;
+    border: 1px solid #343436;
+    outline: none;
+    padding-left: 45px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
+
+  .search-bar:hover, 
+  .search-bar:focus {
+    background-color: #282830;
+    border: 1px solid #343436;
+  }
+
+
+  .thecontainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  }
+
+
+
+  .boxx {
+  flex: 1;
+  background-color: #282830;
+  border: 2px solid #343436;
+  border-radius: 8px;
+  box-shadow: 0 1px 10px #000;
+  margin: 0 15px;
+  width: 200px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 5px; 
+  }
+
+  .qna-box {
+  width: 600px;
+  background-color: #26262e;
+  border: 1px solid #44464a;
+  box-shadow: 0 1px 10px #000;
+  border-radius: 4px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  }
+
+  .qna-box:hover {
+  background-color: #31313b;
+  }
+
+  .qna-box.active {
+  height: auto;
+  }
+
+  .qna-answers {
+  display: none;
+  margin-bottom: 10px;
+  }
+
+  .highlight {
+  color: #b03232; 
+  font-weight: bold; 
+   text-shadow: 
+        -2px 0 #130101,
+         0 1px #130101,
+         2px 0 #130101,
+         0 -1px #130101; 
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+  }
+
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 7px; 
+    gap: 10px;
+  }
+    
+  .containerr {
+    margin-left: 25px;
+    width: 1285px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .box-containerr {
+    background-color: #282830;
+    border: 2px solid #343436;
+    border-radius: 8px;
+    box-shadow: 0 1px 10px #000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1px; 
+    gap: 6px;
+  }
+
+    .box {
+      position: relative;
+      width: 230px;
+      height: 130px;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: border-color 0.3s ease;
+      box-shadow: 0 0 10px #000;
+      border: 2px solid transparent;
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      transition: 0.5s ease;
+    }
+
+    .box:hover img {
+      filter: brightness(90%);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; 
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 0; 
+      transition: opacity 0.3s ease;
+    }
+
+    .box:hover .overlay {
+      opacity: 1;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      opacity: 0; 
+      transition: opacity 0.3s ease;
+      z-index: 2; 
+    }
+
+    .box:hover .text {
+      opacity: 1; 
+    }
+
+    .box:hover {
+      border-color: #b03232;
+    }
+
+  .header-icons {
+    display: flex;
+    justify-content: flex-start;
+    left: 100%; 
+  }
+
+  .header-icons i {
+  text-shadow: 0 1px 15px #000;
+    font-size: 25px; 
+    margin-right: 10px; 
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: #b03232; 
+  }
+
+  .header-icons i:hover {
+    transform: scale(1.2);
+  }
+
+  .welcome-text {
+    text-align: center;
+    margin-left: 445px;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 10px;
+    margin-left: 565px;
+
+
+}
+
+ .play-button { 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #b03232;
+    color: white;
+    box-shadow: 0 1px 10px #000;
+    margin-top: -30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.play-button:hover {
+    background-color: #8c2525;
+}
+
+
+      .content {
+          flex: 1;
+      }
+
+    .footer {
+    background-color: #1E1E24;
+      border-top: 1px solid #343436;
+      box-shadow: 0 1px 7px #000;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+      .footer-logo {
+          display: flex;
+          align-items: center;
+      }
+
+      .footer-logo img {
+          height: 50px;
+          margin-right: 5px;
+          margin-top: -85px;
+      }
+
+      .footer-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+      }
+
+      .footer-title {
+          font-size: 1.2em;
+          font-weight: bold;
+          margin-top: -54px;
+          color: #ccc;
+      }
+
+      .footer-copyright {
+          font-size: 0.8em;
+          margin-top: 1px;
+          margin-left: 7px;
+          opacity: 0.7;
+          color: #fff;
+      }
+
+      .footer-links {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          font-size: 15px;
+      }
+
+      .footer-links li {
+          display: block;
+          margin-bottom: 5px;
+      }
+
+      .footer-links li a {
+          color: #fff;
+          text-decoration: none;
+      }
+
+      .footer-links li a:hover {
+          text-decoration: underline;
+          color: #c9c7c7;
+      }
+
+
+        .footer-links2 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          font-size: 15px;
+          margin-left: -860px;
+      }
+
+      .footer-links2 li {
+          display: block;
+          margin-bottom: 5px;
+      }
+
+      .footer-links2 li a {
+          color: #fff;
+          text-decoration: none;
+      }
+
+      .footer-links2 li a:hover {
+          text-decoration: underline;
+          color: #c9c7c7;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #b03232;
+        border-radius: 5px;
+        height: 2px;
+      }
+
+   canvas {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+
+
+    .searcherr {
+      font-size: 16px;
+      color: #fff;
+      box-shadow: 0 1px 10px #000; 
+      background-color: #1e1e24;
+      border: 1px solid #343436; 
+      transition: width 0.3s ease, background-color 0.3s ease; 
+      width: 400px; 
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="%236C6C6D"/></svg>');
+      background-repeat: no-repeat;
+      background-position: 10px;
+      background-size: 24px 24px;
+      margin-top: -10px;
+      outline: none;
+      padding-left: 45px; 
+      transition: width 0.3s ease, background-color 0.3s ease;
+      padding: 12px 35px;
+      border-radius: 5px;
+      
+    }
+
+    .searcherr:focus {
+      width: 450px;
+      background-color: #282830;
+      border: 1px solid #343436;
+    }
+
+    .searcherr::placeholder {
+      padding-left: 4px;
+    }
+  body {
+    overflow-x: hidden;
+  }
+
+    .twoclick {
+        display: none;
+        position: absolute;
+        background-color: #282830;
+        color: #fff;
+        border: 2px solid #343436;
+        box-shadow: 0 0 6px #000;
+        border-radius: 5px;
+        z-index: 1000;
+        width: 280px;
+        padding: 12px; 
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out; 
+    }
+    .twoclick-item {
+        padding: 12px 16px; 
+        cursor: pointer;
+        font-size: 15px; 
+        position: relative;
+    }
+    .twoclick-item:hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid grey; 
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .twoclick-item i {
+        margin-right: 8px;
+    }
+    .twoclick-divider {
+        margin: 8px 0;
+        border-top: 2px solid #343436;
+    }
+    .twoclick.show {
+        opacity: 1;
+        display: block; 
+    }
+  </style>
+  </head>
+  <body>
+
+  <canvas id="ballsCanvas"></canvas>
+
+  <div id="twoclick-menu" class="twoclick">
+    <div class="twoclick-item" onclick="customAction('Back')"><i class="fas fa-arrow-left"></i> Back</div>
+    <div class="twoclick-item" onclick="customAction('Forward')"><i class="fas fa-arrow-right"></i> Forward</div>
+    <div class="twoclick-item" onclick="customAction('Reload')"><i class="fas fa-sync-alt"></i> Refresh</div>
+    <div class="twoclick-divider"></div>
+    <div class="twoclick-item" onclick="customAction('View Page Source')"><i class="fas fa-code"></i> View Page Source</div>
+    <div class="twoclick-item" onclick="customAction('Inspect')"><i class="fas fa-search"></i> Inspect</div>
+    <div class="twoclick-divider"></div>
+    <div class="twoclick-item" onclick="customAction('Panic Button')"><i class="fas fa-exclamation-triangle"></i> Panic Button</div>
+    <div class="twoclick-item" onclick="customAction('View All Settings')"><i class="fas fa-cog"></i> View All Settings</div>
+  </div>
+
+<div class="navbar">
+    <a href="/">
+        <img src="/images/plexilearcade.png" alt="PLEXILE ARCADE" class="logo">
+    </a>
+    <a href="/games.html" class="navbar-item" id="games">Games</a>
+    <a href="/apps.html" class="navbar-item" id="apps">Apps</a>
+    <a href="/location.html" class="navbar-item" id="proxy">Proxy</a>
+    <a href="/settings.html" class="settings-icon" id="settings"><i class="fas fa-gear"></i></a>
+<input type="text" id="searchInput" class="search-bar" placeholder="Search..." onkeypress="handleKeyPress(event)" oninput="checkAndUpdateIcon()">
+<script>
+    function setInputValue(value) {
+        document.getElementById('searchInput').value = value;
+    }
+
+    function checkAndUpdateIcon() {
+        let inputValue = document.getElementById('searchInput').value.trim();
+
+        if (isValidURL(inputValue)) {
+            console.log("Valid URL");
+        } else {
+            console.log("Not a valid URL");
+        }
+    }
+
+    function searchAndRedirect() {
+        let inputValue = document.getElementById('searchInput').value.trim();
+
+        if (inputValue.includes('.')) {
+            if (!inputValue.startsWith('http://') && !inputValue.startsWith('https://')) {
+                inputValue = 'http://' + inputValue;
+            }
+
+            const encodedValue = btoa(inputValue);
+            const proxiedURL = "/pa/_" + encodedValue + '_/';
+
+            const currentPage = window.location.pathname.split("/").pop();
+            let redirectURL = currentPage === 'go.html' ? 'go.html' : (currentPage === 'go.hrml' ? 'go.html' : 'go.html'); // Typo corrected
+            redirectURL += "?proxiedURL=" + encodeURIComponent(proxiedURL);
+
+            window.location.href = redirectURL;
+        } else {
+            const searchQuery = encodeURIComponent(inputValue);
+            const searchURL = "/go.html?searchQuery=" + searchQuery;
+            window.location.href = searchURL;
+        }
+    }
+
+    function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            searchAndRedirect();
+        }
+    }
+
+    function isValidURL(url) {
+        const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,})([/\w .-]*)*\/?$/i;
+        return urlPattern.test(url);
+    }
+</script>
+</div>
+
+  <br><br><br><br><br>
+    <center>
+      <input type="text" class="searcherr" id="searchers" placeholder="Search For 200+ Games...">
+    </center>
+<br>
+
+    <script>
+    const searchInput = document.getElementById('searchers');
+    const footer = document.querySelector('.footer');
+
+    searchInput.addEventListener('input', function() {
+      const searchValue = searchInput.value.toLowerCase(); 
+
+      const boxes = document.querySelectorAll('.box');
+
+      boxes.forEach(box => {
+        const text = box.querySelector('.text').textContent.toLowerCase(); 
+
+        if (text.includes(searchValue)) {
+          box.style.display = 'block'; 
+        } else {
+          box.style.display = 'none'; 
+        }
+      });
+
+      if (searchValue.trim() !== '') {
+        footer.classList.add('footer-searching');
+      } else {
+        footer.classList.remove('footer-searching');
+      }
+    });
+
+    </script>
+
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/roblox.html" class="box">
+          <img src="/images/games/roblox.png" alt="Games IMG">
+          <div class="overlay"></div>
+          <div class="text">Roblox</div>
+        </a>
+
+             <a href="/games/baconmaydie.html" class="box">
+          <img src="/images/games/baconmaydie.png" alt="Games IMG">
+          <div class="overlay"></div>
+          <div class="text">Bacon May Die</div>
+        </a>
+             <a href="/games/basketballstars.html" class="box">
+          <img src="/images/games/basketballstars.png" alt="Games IMG">
+          <div class="overlay"></div>
+          <div class="text">Basketball Stars</div>
+        </a>
+             <a href="/games/bitlife.html" class="box">
+          <img src="/images/games/bitlife.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bitlife</div>
+        </a>
+             <a href="/games/infiltratingtheairship.html" class="box">
+          <img src="/images/games/infiltratingtheairship.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Infiltrating the Airship</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/breakingthebank.html" class="box">
+          <img src="/images/games/breakingthebank.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Breaking The Bank</div>
+        </a>
+
+             <a href="/games/bloonstd.html" class="box">
+          <img src="/images/games/bloonstd.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bloons TD</div>
+        </a>
+             <a href="/games/bloonstd2.html" class="box">
+          <img src="/images/games/bloonstd2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bloons TD 2</div>
+        </a>
+             <a href="/games/bloonstd3.html" class="box">
+          <img src="/images/games/bloonstd3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bloons TD 3</div>
+        </a>
+             <a href="/games/bobtherobber.html" class="box">
+          <img src="/images/games/bobtherobber.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bob The Robber</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/bobtherobber2.html" class="box">
+          <img src="/images/games/bobtherobber2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bob The Robber 2</div>
+        </a>
+
+             <a href="/games/cookieclicker.html" class="box">
+          <img src="/images/games/cookieclicker.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Cookie Clicker</div>
+        </a>
+             <a href="/games/coreball.html" class="box">
+          <img src="/images/games/coreball.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Core Ball</div>
+        </a>
+             <a href="/games/crossyroad.html" class="box">
+          <img src="/images/games/crossyroad.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Crossy Road</div>
+        </a>
+             <a href="/games/cuttherope.html" class="box">
+          <img src="/images/games/cuttherope.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Cut The Rope</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/deathrun3d.html" class="box">
+          <img src="/images/games/deathrun3d.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Death Run 3D</div>
+        </a>
+
+             <a href="/games/doodlejump.html" class="box">
+          <img src="/images/games/doodlejump.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Doodle Jump</div>
+        </a>
+             <a href="/games/driftboss.html" class="box">
+          <img src="/images/games/driftboss.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Drift Boss</div>
+        </a>
+             <a href="/games/drivemad.html" class="box">
+          <img src="/images/games/drivemad.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Drive Mad</div>
+        </a>
+             <a href="/games/drunkenboxing2.html" class="box">
+          <img src="/images/games/drunkenboxing2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Drunken Boxing 2</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/akinator.html" class="box">
+          <img src="/images/games/akinator.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">akinator</div>
+        </a>
+
+             <a href="/games/ducklife4.html" class="box">
+          <img src="/images/games/ducklife4.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Duck Life 4</div>
+        </a>
+             <a href="/games/eaglercraft.html" class="box">
+          <img src="/images/games/eaglercraft.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Eaglercraft 1.5</div>
+        </a>
+             <a href="/games/eaglercraftx.html" class="box">
+          <img src="/images/games/eaglercraftx.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">EaglercraftX 1.8</div>
+        </a>
+             <a href="/games/eggycar.html" class="box">
+          <img src="/images/games/eggycar.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Eggy Car</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/eurocup.html" class="box">
+          <img src="/images/games/eurocup.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Euro Cup</div>
+        </a>
+
+             <a href="/games/evilglitch.html" class="box">
+          <img src="/images/games/evilglitch.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Evil Glitch</div>
+        </a>
+             <a href="/games/fireboyandwatergirl.html" class="box">
+          <img src="/images/games/fireboyandwatergirl.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Fireboy & Watergirl</div>
+        </a>
+             <a href="/games/flappybird.html" class="box">
+          <img src="/images/games/flappybird.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Flappy Bird</div>
+        </a>
+             <a href="/games/fnaf.html" class="box">
+          <img src="/images/games/fnaf.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">FNAF</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/fnaf2.html" class="box">
+          <img src="/images/games/fnaf2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">FNAF 2</div>
+        </a>
+
+             <a href="/games/fnaf3.html" class="box">
+          <img src="/images/games/fnaf3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">FNAF 3</div>
+        </a>
+             <a href="/games/fnaf4.html" class="box">
+          <img src="/images/games/fnaf4.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">FNAF 4</div>
+        </a>
+             <a href="/games/sisterslocation.html" class="box">
+          <img src="/images/games/sisterslocation.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Sisters Location</div>
+        </a>
+             <a href="/games/worldshardestgame.html" class="box">
+          <img src="/images/games/worldshardestgame.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Worlds Hardest Game</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/geometrydash.html" class="box">
+          <img src="/images/games/geometrydash.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Geometry Dash</div>
+        </a>
+
+             <a href="/games/geometrydashscratch.html" class="box">
+          <img src="/images/games/geometrydashscratch.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Geometry Dash (Scratch)</div>
+        </a>
+             <a href="/games/getawayshootout.html" class="box">
+          <img src="/images/games/getawayshootout.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Getaway Shootout</div>
+        </a>
+             <a href="/games/googlefeud.html" class="box">
+          <img src="/images/games/googlefeud.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Google Feud</div>
+        </a>
+             <a href="/games/snowrider3d.html" class="box">
+          <img src="/images/games/snowrider3d.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Snow Rider 3D</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/granny.html" class="box">
+          <img src="/images/games/granny.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Granny</div>
+        </a>
+
+             <a href="/games/hanger2.html" class="box">
+          <img src="/images/games/hanger2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hanger 2</div>
+        </a>
+             <a href="/games/happywheels.html" class="box">
+          <img src="/images/games/happywheels.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Happy Wheels</div>
+        </a>
+             <a href="/games/hexgl.html" class="box">
+          <img src="/images/games/hexgl.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">HexGL</div>
+        </a>
+             <a href="/games/hobo.html" class="box">
+          <img src="/images/games/hobo.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hobo</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/hobo2.html" class="box">
+          <img src="/images/games/hobo2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hobo 2</div>
+        </a>
+
+             <a href="/games/hobo3.html" class="box">
+          <img src="/images/games/hobo3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hobo 3</div>
+        </a>
+             <a href="/games/hobo4.html" class="box">
+          <img src="/images/games/hobo4.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hobo 4</div>
+        </a>
+             <a href="/games/hobo5.html" class="box">
+          <img src="/images/games/hobo5.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hobo 5</div>
+        </a>
+             <a href="/games/hobo6.html" class="box">
+          <img src="/images/games/hobo6.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hobo 6</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/hobo7.html" class="box">
+          <img src="/images/games/hobo7.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hobo 7</div>
+        </a>
+
+             <a href="/games/jacksmith.html" class="box">
+          <img src="/images/games/jacksmith.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Jacksmith</div>
+        </a>
+             <a href="/games/justfall.html" class="box">
+          <img src="/images/games/justfall.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">JustFall.LOL</div>
+        </a>
+             <a href="/games/justoneboss.html" class="box">
+          <img src="/images/games/justoneboss.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Just One Boss</div>
+        </a>
+             <a href="/games/kickthebuddy.html" class="box">
+          <img src="/images/games/kickthebuddy.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Kick The Buddy</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/learn2fly.html" class="box">
+          <img src="/images/games/learn2fly.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Learn 2 Fly</div>
+        </a>
+
+             <a href="/games/littlealchemy.html" class="box">
+          <img src="/images/games/littlealchemy.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Little Alchemy</div>
+        </a>
+             <a href="/games/littlealchemy2.html" class="box">
+          <img src="/images/games/littlealchemy2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+            <div class="text">Little Alchemy 2</div>
+        </a>
+             <a href="/games/longleash.html" class="box">
+          <img src="/images/games/longleash.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Long Leash</div>
+        </a>
+             <a href="/games/madalinstuntcars2.html" class="box">
+          <img src="/images/games/madalinstuntcars2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Madalin Stunt Cars 2</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/magictiles3.html" class="box">
+          <img src="/images/games/magictiles3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Magic Tiles 3</div>
+        </a>
+
+             <a href="/games/monkeymart.html" class="box">
+          <img src="/images/games/monkeymart.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Monkey Mart</div>
+        </a>
+             <a href="/games/motox3m.html" class="box">
+          <img src="/images/games/motox3m.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Moto X3M</div>
+        </a>
+             <a href="/games/motox3m2.html" class="box">
+          <img src="/images/games/motox3m2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Moto X3M 2</div>
+        </a>
+             <a href="/games/ninjavsevilcorp.html" class="box">
+          <img src="/images/games/ninjavsevilcorp.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Ninja Vs Evil Corp</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/noobsteveparkour.html" class="box">
+          <img src="/images/games/noobsteveparkour.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Noob Steve Parkour</div>
+        </a>
+
+             <a href="/games/ovo.html" class="box">
+          <img src="/images/games/ovo.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">OvO</div>
+        </a>
+             <a href="/games/portalflash.html" class="box">
+          <img src="/images/games/portalflash.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Portal (Flash)</div>
+        </a>
+             <a href="/games/plantsvszombies.html" class="box">
+          <img src="/images/games/pvz.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Plants Vs Zombies</div>
+        </a>
+             <a href="/games/redball4.html" class="box">
+          <img src="/images/games/redball4.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Red Ball 4</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/retrobowl.html" class="box">
+          <img src="/images/games/retrobowl.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Retro Bowl</div>
+        </a>
+
+             <a href="/games/riddleschool.html" class="box">
+          <img src="/images/games/riddleschool.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Riddle School</div>
+        </a>
+             <a href="/games/riddleschool2.html" class="box">
+          <img src="/images/games/riddleschool2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Riddle School 2</div>
+        </a>
+             <a href="/games/riddleschool3.html" class="box">
+          <img src="/images/games/riddleschool3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Riddle School 3</div>
+        </a>
+             <a href="/games/riddleschool4.html" class="box">
+          <img src="/images/games/riddleschool4.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Riddle School 4</div>
+        </a>
+        
+        </div>
+        </div>
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/riddleschool5.html" class="box">
+          <img src="/images/games/riddleschool5.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Riddle School 5</div>
+        </a>
+
+             <a href="/games/rocketleague2d.html" class="box">
+          <img src="/images/games/rocketleague2d.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Rocket League 2D</div>
+        </a>
+             <a href="/games/rocketsoccerderby.html" class="box">
+          <img src="/images/games/rocketsoccerderby.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Rocket Soccer Derby</div>
+        </a>
+             <a href="/games/rooftopsnipers.html" class="box">
+          <img src="/images/games/rooftopsnipers.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Rooftop Snipers</div>
+        </a>
+             <a href="/games/run3.html" class="box">
+          <img src="/images/games/run3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Run 3</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/slope.html" class="box">
+          <img src="/images/games/slope.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Slope</div>
+        </a>
+
+             <a href="/games/slope2.html" class="box">
+          <img src="/images/games/slope2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Slope 2</div>
+        </a>
+             <a href="/games/slopetunnel.html" class="box">
+          <img src="/images/games/slopetunnel.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Slope Tunnel</div>
+        </a>
+             <a href="/games/smashkarts.html" class="box">
+          <img src="/images/games/smashkarts.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Smash Karts</div>
+        </a>
+             <a href="/games/snowball-io.html" class="box">
+          <img src="/images/games/snowball-io.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Snowball.io</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/soccerrandom.html" class="box">
+          <img src="/images/games/soccerrandom.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Soccer Random</div>
+        </a>
+
+             <a href="/games/stickmanhook.html" class="box">
+          <img src="/images/games/stickmanhook.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Stickman Hook</div>
+        </a>
+             <a href="/games/stumbleguys.html" class="box">
+          <img src="/images/games/stumbleguys.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Stumble Guys</div>
+        </a>
+             <a href="/games/subwaysurfers.html" class="box">
+          <img src="/images/games/subwaysurfers.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Subway Surfers</div>
+        </a>
+             <a href="/games/suikagame.html" class="box">
+          <img src="/images/games/suikagame.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Suika Game</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/basketrandom.html" class="box">
+          <img src="/images/games/basketrandom.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Basket Random</div>
+        </a>
+
+             <a href="/games/boxingrandom.html" class="box">
+          <img src="/images/games/boxingrandom.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Boxing Random</div>
+        </a>
+             <a href="/games/superhot.html" class="box">
+          <img src="/images/games/superhot.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Superhot</div>
+        </a>
+             <a href="/games/supermariobros.html" class="box">
+          <img src="/images/games/supermariobros.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Super Mario Bros</div>
+        </a>
+             <a href="/games/tanukisunset.html" class="box">
+          <img src="/images/games/tanukisunset.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tanuki Sunset</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/templerun2.html" class="box">
+          <img src="/images/games/templerun2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Temple Run 2</div>
+        </a>
+
+             <a href="/games/timeshooter3.html" class="box">
+          <img src="/images/games/timeshooter3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Time Shooter 3</div>
+        </a>
+             <a href="/games/tinyfishing.html" class="box">
+          <img src="/images/games/tinyfishing.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tiny Fishing</div>
+        </a>
+             <a href="/games/theimpossiblequiz.html" class="box">
+          <img src="/images/games/theimpossiblequiz.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">The Impossible Quiz</div>
+        </a>
+             <a href="/games/theimpossiblequiz2.html" class="box">
+          <img src="/images/games/theimpossiblequiz2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">The Impossible Quiz 2</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/tombofthemask.html" class="box">
+          <img src="/images/games/tombofthemask.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tomb Of The Mask</div>
+        </a>
+
+             <a href="/games/tosstheturtle.html" class="box">
+          <img src="/images/games/tosstheturtle.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Toss The Turtle</div>
+        </a>
+             <a href="/games/tubejumpers.html" class="box">
+          <img src="/images/games/tubejumpers.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tube Jumpers</div>
+        </a>
+             <a href="/games/tunnelrush.html" class="box">
+          <img src="/images/games/tunnelrush.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tunnel Rush</div>
+        </a>
+             <a href="/games/unfairmario.html" class="box">
+          <img src="/images/games/unfairmario.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Unfair Mario</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/vex.html" class="box">
+          <img src="/images/games/vex.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Vex</div>
+        </a>
+
+             <a href="/games/youvs100skibiditoilets.html" class="box">
+          <img src="/images/games/skibiditoilet.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">You Vs 100 Skibidi Toilets</div>
+        </a>
+             <a href="/games/vex3.html" class="box">
+          <img src="/images/games/vex3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Vex 3</div>
+        </a>
+             <a href="/games/vex4.html" class="box">
+          <img src="/images/games/vex4.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Vex 4</div>
+        </a>
+             <a href="/games/vex5.html" class="box">
+          <img src="/images/games/vex5.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Vex 5</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/vex6.html" class="box">
+          <img src="/images/games/vex6.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Vex 6</div>
+        </a>
+
+             <a href="/games/vex7.html" class="box">
+          <img src="/images/games/vex7.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Vex 7</div>
+        </a>
+             <a href="/games/helixjump.html" class="box">
+          <img src="/images/games/helixjump.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Helix Jump</div>
+        </a>
+             <a href="/games/volleyrandom.html" class="box">
+          <img src="/images/games/volleyrandom.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Volley Random</div>
+        </a>
+             <a href="/games/webecomewhatwebehold.html" class="box">
+          <img src="/images/games/webecomewhatwebehold.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">We Become What We Behold</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/baldisbasics.html" class="box">
+          <img src="/images/games/baldisbasics.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Baldi's Basics</div>
+        </a>
+
+             <a href="/games/gladihoppers.html" class="box">
+          <img src="/images/games/gladihoppers.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Gladihoppers</div>
+        </a>
+             <a href="/games/gunspin.html" class="box">
+          <img src="/images/games/gunspin.png" alt="Apps IMG">
+            <div class="overlay"></div>
+            <div class="text">GunSpin</div>
+        </a>
+             <a href="/games/footballlegends.html" class="box">
+          <img src="/images/games/footballlegends.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Football Legends</div>
+        </a>
+             <a href="/games/fridaynightfunkin.html" class="box">
+          <img src="/images/games/fridaynightfunkin.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Friday Night Funkin</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/paperio2.html" class="box">
+          <img src="/images/games/paperio2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Paper.io 2</div>
+        </a>
+
+             <a href="/games/basketbros.html" class="box">
+          <img src="/images/games/basketbros.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Basket Bros</div>
+        </a>
+             <a href="/games/1on1soccer.html" class="box">
+          <img src="/images/games/1on1soccer.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">1 On 1 Soccer</div>
+        </a>
+             <a href="/games/1v1lol.html" class="box">
+          <img src="/images/games/1v1lol.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">1v1.LOL</div>
+        </a>
+             <a href="/games/2048.html" class="box">
+          <img src="/images/games/2048.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">2048</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/bloxorz.html" class="box">
+          <img src="/images/games/bloxorz.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bloxorz</div>
+        </a>
+
+             <a href="/games/fancypantsadventure.html" class="box">
+          <img src="/images/games/fancypantsadventure.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Fancy Pants Adventure</div>
+        </a>
+             <a href="/games/fancypantsadventure2.html" class="box">
+          <img src="/images/games/fancypantsadventure2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Fancy Pants Adventure 2</div>
+        </a>
+             <a href="/games/tacticalweaponpack2.html" class="box">
+          <img src="/images/games/tacticalweaponpack3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tactical Weapon Pack 2</div>
+        </a>
+             <a href="/games/achievementunlocked.html" class="box">
+          <img src="/images/games/achievementunlocked.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Achievement Unlocked</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/burritobison.html" class="box">
+          <img src="/images/games/buritobison.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Burrito Bison</div>
+        </a>
+
+             <a href="/games/ageofwar.html" class="box">
+          <img src="/images/games/ageofwar.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Age Of War</div>
+        </a>
+             <a href="/games/alienhominid.html" class="box">
+          <img src="/images/games/alienhominid.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Alien Hominid</div>
+        </a>
+             <a href="/games/amongus.html" class="box">
+          <img src="/images/games/amongus.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Among Us</div>
+        </a>
+             <a href="/games/extremepamplona.html" class="box">
+          <img src="/images/games/extremepamplona.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Extreme Pamplona</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/dinogame.html" class="box">
+          <img src="/images/games/dinogame.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Dino Game</div>
+        </a>
+
+             <a href="/games/awesometanks2.html" class="box">
+          <img src="/images/games/awesometanks2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Awesome Tanks 2</div>
+        </a>
+             <a href="/games/rugbyioballmayhem.html" class="box">
+          <img src="/images/games/rugbyioballmayhem.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Rugby.io Ball Mayhem</div>
+        </a>
+             <a href="/games/flipbottle.html" class="box">
+          <img src="/images/games/flipbottle.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Flip Bottle</div>
+        </a>
+             <a href="/games/badicecream.html" class="box">
+          <img src="/images/games/badicecream.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Bad Ice Cream</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/avalanche.html" class="box">
+          <img src="/images/games/avalanche.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">avalanche</div>
+        </a>
+
+             <a href="/games/aquaparkslides.html" class="box">
+          <img src="/images/games/aquaparkslides.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Aquapark Slides</div>
+        </a>
+             <a href="/games/angrysharks.html" class="box">
+          <img src="/images/games/angrysharks.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Angry Sharks</div>
+        </a>
+             <a href="/games/burgerandfrights.html" class="box">
+          <img src="/images/games/burgerandfrights.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Burger & frights</div>
+        </a>
+             <a href="/games/cannonbasketball4.html" class="box">
+          <img src="/images/games/cannonbasketball4.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Cannon Basketball 4</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/fruitninja.html" class="box">
+          <img src="/images/games/fruitninja.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Fruit Ninja</div>
+        </a>
+
+             <a href="/games/elasticman.html" class="box">
+          <img src="/images/games/elasticman.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Elastic Man</div>
+        </a>
+             <a href="/games/drawthehill.html" class="box">
+          <img src="/images/games/drawthehill.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Draw The Hill</div>
+        </a>
+             <a href="/games/fryingnemo.html" class="box">
+          <img src="/images/games/fryingnemo.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Frying Nemo</div>
+        </a>
+             <a href="/games/wordle+.html" class="box">
+          <img src="/images/games/wordle+.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Wordle+</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/weavesilk.html" class="box">
+          <img src="/images/games/weavesilk.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Weave Silk</div>
+        </a>
+
+             <a href="/games/tanktrouble.html" class="box">
+          <img src="/images/games/tanktrouble.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tank Trouble</div>
+        </a>
+             <a href="/games/swerve.html" class="box">
+          <img src="/images/games/swerve.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Swerve</div>
+        </a>
+             <a href="/games/stickmerge.html" class="box">
+          <img src="/images/games/stickmerge.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Stick Merge</div>
+        </a>
+             <a href="/games/stickarchers.html" class="box">
+          <img src="/images/games/stickarchers.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Stick Archers</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/shootercraft.html" class="box">
+          <img src="/images/games/shootercraft.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Shooter Craft</div>
+        </a>
+
+             <a href="/games/station141.html" class="box">
+          <img src="/images/games/station141.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Station 141</div>
+        </a>
+             <a href="/games/myrustysubmarine.html" class="box">
+          <img src="/images/games/myrustysubmarine.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">My Rusty Submarine</div>
+        </a>
+             <a href="/games/stack.html" class="box">
+          <img src="/images/games/stack.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Stack</div>
+        </a>
+             <a href="/games/slimerushtd.html" class="box">
+          <img src="/images/games/slimerushtd.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Slime Rush TD</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/rolleyvortex.html" class="box">
+          <img src="/images/games/rolleyvortex.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Rolley Vortex</div>
+        </a>
+
+             <a href="/games/rabbitsamurai2.html" class="box">
+          <img src="/images/games/rabbitsamurai2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Rabbit Samurai 2</div>
+        </a>
+             <a href="/games/papaspizzeria.html" class="box">
+          <img src="/images/games/papaspizzeria.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Papa's Pizzeria</div>
+        </a>
+             <a href="/games/papalouie2whenburgersattack.html" class="box">
+          <img src="/images/games/papalouie2whenburgersattack.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Papa Louie 2: When Burgers Attack!</div>
+        </a>
+             <a href="/games/kittencannon.html" class="box">
+          <img src="/images/games/kittencannon.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Kitten Cannon</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/knifehit.html" class="box">
+          <img src="/images/games/knifehit.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Knife Hit</div>
+        </a>
+
+             <a href="/games/jetpackjoyride.html" class="box">
+          <img src="/images/games/jetpackjoyride.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Jetpack Joyride</div>
+        </a>
+             <a href="/games/idlebreakout.html" class="box">
+          <img src="/images/games/idlebreakout.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Idle Breakout</div>
+        </a>
+             <a href="/games/gravitysoccer.html" class="box">
+          <img src="/images/games/gravitysoccer.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Gravity Soccer</div>
+        </a>
+             <a href="/games/georgeandtheprinter.html" class="box">
+          <img src="/images/games/georgeandtheprinter.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">George And The Printer</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+          <a href="/games/tetris.html" class="box">
+            <img src="/images/games/tetris.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Tetris</div>
+        </a>
+
+             <a href="/games/escapingtheprison.html" class="box">
+          <img src="/images/games/escapingtheprison.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Escaping The Prison</div>
+        </a>
+             <a href="/games/defendthetank.html" class="box">
+          <img src="/images/games/defendthetank.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Defend The Tank</div>
+        </a>
+             <a href="/games/doctoracorn2.html" class="box">
+          <img src="/images/games/doctoracorn2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Doctor Acorn 2</div>
+        </a>
+             <a href="/games/bigtowertinysquare.html" class="box">
+          <img src="/images/games/bigtowertinysquare.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Big Tower Tiny Square</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/boxhead.html" class="box">
+          <img src="/images/games/boxhead.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Box Head</div>
+        </a>
+
+             <a href="/games/ballisticchickens.html" class="box">
+          <img src="/images/games/ballisticchickens.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">ballistic Chickens</div>
+        </a>
+             <a href="/games/potatochipclicker.html" class="box">
+          <img src="/images/games/potatochipclicker.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Potato Chip Clicker (PLEXILE Network's Game)</div>
+        </a>
+             <a href="/games/backrooms.html" class="box">
+          <img src="/images/games/backrooms.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Backrooms</div>
+        </a>
+             <a href="/games/agesofconflict.html" class="box">
+          <img src="/images/games/agesofconflict.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Ages Of Conflict</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/adventuredrivers.html" class="box">
+          <img src="/images/games/adventuredrivers.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Adventure Drivers</div>
+        </a>
+
+             <a href="/games/10minutestilldawn.html" class="box">
+          <img src="/images/games/10minutestilldawn.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">10 Minutes Till Dawn</div>
+        </a>
+             <a href="/games/basketandball.html" class="box">
+          <img src="/images/games/basketandball.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Basket & Ball</div>
+        </a>
+             <a href="/games/dogeminer.html" class="box">
+          <img src="/images/games/dogeminer.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Dogeminer</div>
+        </a>
+             <a href="/games/60sburgerrun.html" class="box">
+          <img src="/images/games/60sburgerrun.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">60s Burger Run</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/murder.html" class="box">
+          <img src="/images/games/murder.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Murder: Be The King</div>
+        </a>
+
+             <a href="/games/santyishome.html" class="box">
+          <img src="/images/games/santyishome.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Santy Is Home</div>
+        </a>
+             <a href="/games/stickduel.html" class="box">
+          <img src="/images/games/stickduel.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Stick Duel: Medieval Wars</div>
+        </a>
+             <a href="/games/funnyshooter2.html" class="box">
+          <img src="/images/games/funnyshooter2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Funny Shooter 2</div>
+        </a>
+             <a href="/games/sausageflip.html" class="box">
+          <img src="/images/games/sausageflip.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Sausage Flip</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/evio.html" class="box">
+          <img src="/images/games/evio.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">ev.io</div>
+        </a>
+
+             <a href="/games/appel.html" class="box">
+          <img src="/images/games/appel.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Appel</div>
+        </a>
+             <a href="/games/shoppingcarthero3.html" class="box">
+          <img src="/images/games/shoppingcarthero3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Shopping Cart Hero 3</div>
+        </a>
+             <a href="/games/doodlebaseball.html" class="box">
+          <img src="/images/games/doodlebaseball.gif" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Doodle Baseball</div>
+        </a>
+             <a href="/games/csgoclicker.html" class="box">
+          <img src="/images/games/csgoclicker.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">CS:GO Clicker</div>
+        </a>
+        
+        </div>
+        </div>
+    
+      <div class="container">
+      <div class="box-container">
+        <a href="/games/circloo.html" class="box">
+          <img src="/images/games/circloo.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">circloO</div>
+        </a>
+
+             <a href="/games/x-trialracing.html" class="box">
+          <img src="/images/games/x-trialracing.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">X-Trial Racing</div>
+        </a>
+             <a href="/games/jellytruck.html" class="box">
+          <img src="/images/games/jellytruck.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Jelly Truck</div>
+        </a>
+             <a href="/games/sportsheadsfootball.html" class="box">
+          <img src="/images/games/sportsheadsfootball.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Sports Heads Football</div>
+        </a>
+             <a href="/games/raftwars2.html" class="box">
+          <img src="/images/games/raftwars2.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Raft Wars 2</div>
+        </a>
+        
+        </div>
+        </div>
+
+    <div class="container">
+      <div class="box-container">
+        <a href="/games/pacman.html" class="box">
+          <img src="/images/games/pacman.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Pac Man</div>
+        </a>
+
+             <a href="/games/superstickmangolf3.html" class="box">
+          <img src="/images/games/superstickmangolf3.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Super Stickman Golf 3</div>
+        </a>
+             <a href="/games/ironsnout.html" class="box">
+          <img src="/images/games/ironsnout.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Iron Snout</div>
+        </a>
+             <a href="/games/clickerheroes.html" class="box">
+          <img src="/images/games/clickerheroes.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Clicker Heroes</div>
+        </a>
+             <a href="/games/eagleride.html" class="box">
+          <img src="/images/games/eagleride.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Eagle Ride</div>
+        </a>
+
+        </div>
+        </div>
+
+    <div class="container">
+      <div class="box-container">
+        <a href="/games/deepestsword.html" class="box">
+          <img src="/images/games/deepestsword.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Deepest Sword</div>
+        </a>
+
+             <a href="/games/drifthunters.html" class="box">
+          <img src="/images/games/drifthunters.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Drift Hunters</div>
+        </a>
+             <a href="/games/combatonline.html" class="box">
+          <img src="/images/games/combatonline.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Combat Online</div>
+        </a>
+             <a href="/games/hillclimbracing.html" class="box">
+          <img src="/images/games/hillclimbingracing.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">Hill Climb Racing</div>
+        </a>
+             <a href="/games/adanceoffireandice.html" class="box">
+          <img src="/images/games/adanceoffireandice.png" alt="Apps IMG">
+          <div class="overlay"></div>
+          <div class="text">A Dance Of Fire And Ice</div>
+        </a>
+
+        </div>
+        </div>
+
+    
+    <br>
+    <div class="content">
+    </div>
+
+  <footer class="footer">
+  <div class="footer-logo">
+<img src="/images/plexilearcade.png" alt="Logo">
+                <div class="footer-text">
+                    <div class="footer-title"><span class="highlight">PLEXILE ARCADE</span></div>
+                    <div class="footer-copyright">© 2024 PLEXILE Network</div>
+                </div>
+            </div>
+
+          <ul class="footer-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/games.html">Games</a></li>
+                <li><a href="/apps.html">Apps</a></li>
+                <li><a href="/location.html">Proxy</a></li>
+            </ul>
+
+            <ul class="footer-links2">
+                <li><a href="/settings.html">Settings</a></li>
+                <li><a href="/credits.html">Credits</a></li>
+                <li><a href="/privacypolicy.html">Privacy Policy</a></li>
+                <li><a href="/tos.html">Terms OS</a></li>
+            </ul>
+          </footer>
+    <script>
+      const canvas = document.getElementById('ballsCanvas');
+      const ctx = canvas.getContext('2d');
+      let balls = [];
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      function Ball() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+        this.vx = -0.2 + Math.random() * 0.4;
+        this.vy = -0.2 + Math.random() * 0.4;
+          this.size = Math.random() * 3.7 + 3;
+          this.alpha = Math.random() * 0.4 + 0.2;
+          this.colors = [
+              '176, 50, 50',
+              '227, 197, 195'
+          ];
+          this.lightColors = [
+              '216, 155, 153',
+              '237, 217, 215'
+          ];
+          this.color = Math.random() < 0.6 ? this.colors[0] : this.lightColors[Math.floor(Math.random() * this.lightColors.length)];
+      }
+
+      Ball.prototype.update = function() {
+          this.x += this.vx;
+          this.y += this.vy;
+
+          if (this.x < 0 || this.x > canvas.width) {
+              this.vx = -this.vx;
+          }
+
+          if (this.y < 0 || this.y > canvas.height) {
+              this.vy = -this.vy;
+          }
+
+          this.draw();
+      };
+
+      Ball.prototype.draw = function() {
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+      };
+
+      function createBalls() {
+          for (let i = 0; i < 105; i++) {
+              balls.push(new Ball());
+          }
+      }
+
+      function animate() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          balls.forEach((ball) => {
+              ball.update();
+          });
+
+          requestAnimationFrame(animate);
+      }
+
+      createBalls();
+      animate();
+
+      window.addEventListener('resize', () => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+      });
+    </script>
+    <script src="/anticlosing.js" defer></script>
+    <script src="/clickoffcloaking.js" defer></script>
+    <script src="/ads.js" defer></script>
+    <script src="/tabcloak.js" defer></script>
+    <script src="/panic.js" defer></script>
+    <script src="/mobile.js" defer></script>
+    <script src="/themes.js" defer></script>
+
+</body>
+</html>

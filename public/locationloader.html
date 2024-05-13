@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PLEXILE ARCADE | Loader</title>
+    <link rel="icon" type="image/png" href="/plexilearcade.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #1E1E24;
+            overflow: hidden;
+        }
+
+        .loader-container {
+            text-align: center;
+            animation: fadeOut 3s ease-out forwards;
+            animation-delay: 4s;
+            position: relative;
+        }
+
+        img {
+            color: #b03232;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 6em;
+            margin-bottom: 15px;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -110%);
+            z-index: 1;
+            width: 505px;
+            height: 130px;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 39px; 
+            height: 39px; 
+            border: 10px solid rgba(176, 50, 50, 0.3);
+            border-radius: 50%;
+            border-top: 10px solid #b03232;
+            animation: spin 1s linear infinite;
+            margin-top: 50px;
+            z-index: 0; 
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        .embed-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #16181C;
+            display: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .twoclick {
+            display: none;
+            position: absolute;
+            background-color: #282830;
+            color: #fff;
+            border: 2px solid #343436;
+            box-shadow: 0 0 6px #000;
+            border-radius: 5px;
+            z-index: 1000;
+            width: 280px;
+            padding: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .twoclick-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 15px;
+            position: relative;
+        }
+
+        .twoclick-item:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid grey;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .twoclick-item i {
+            margin-right: 8px;
+        }
+
+        .twoclick-divider {
+            margin: 8px 0;
+            border-top: 2px solid #343436;
+        }
+
+        .twoclick.show {
+            opacity: 1;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="twoclick-menu" class="twoclick">
+    <div class="twoclick-item" onclick="customAction('Back')"><i class="fas fa-arrow-left"></i> Back</div>
+    <div class="twoclick-item" onclick="customAction('Forward')"><i class="fas fa-arrow-right"></i> Forward</div>
+    <div class="twoclick-item" onclick="customAction('Reload')"><i class="fas fa-sync-alt"></i> Refresh</div>
+    <div class="twoclick-divider"></div>
+    <div class="twoclick-item" onclick="customAction('View Page Source')"><i class="fas fa-code"></i> View Page Source</div>
+    <div class="twoclick-item" onclick="customAction('Inspect')"><i class="fas fa-search"></i> Inspect</div>
+    <div class="twoclick-divider"></div>
+    <div class="twoclick-item" onclick="customAction('Panic Button')"><i class="fas fa-exclamation-triangle"></i> Panic Button</div>
+    <div class="twoclick-item" onclick="customAction('View All Settings')"><i class="fas fa-cog"></i> View All Settings</div>
+</div>
+<div class="loader-container" id="loader">
+    <img src="/images/plexilearcadebanner.png">
+    <div class="spinner"></div>
+</div>
+
+<div class="embed-container" id="embeddedContent">
+    <iframe src="" frameborder="0"></iframe>
+</div>
+
+<script>
+    setTimeout(function() {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('embeddedContent').style.display = 'block';
+    }, 9000000000000);
+</script>
+
+<script src="/anticlosing.js" defer></script>
+<script src="/clickoffcloaking.js" defer></script>
+<script src="/tabcloak.js" defer></script>
+<script src="/panic.js" defer></script>
+<script src="/mobile.js" defer></script>
+<script src="/themes.js" defer></script>
+
+</body>
+</html>
